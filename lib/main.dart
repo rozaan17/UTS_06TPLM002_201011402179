@@ -27,12 +27,12 @@ class Product {
 final List<Product> products = [
   Product(
       "Nike Free Run 2",
-      ("https://www.freepnglogos.com/uploads/shoes-png/shoes-wasatch-running-3.png"),
+      "assets/gambar/sepatu biru.png",
       "Men's Road Running Shoes",
       "Rp 275.000"),
   Product(
       "Nike Janoski Mid White",
-      ("https://pngfolio.com/images/all_img/copy/1635221496shoes-png-image.png"),
+      "assets/gambar/sepatu coklat.png",
       "Men's shoes",
       "Rp 700.000"),
 ];
@@ -60,7 +60,7 @@ class ProductListScreen extends StatelessWidget {
                         TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold)),
                 SizedBox(width: 16.0),
                 CircleAvatar(
-                  backgroundImage: AssetImage("gambar/foto profil.jpeg"),
+                  backgroundImage: AssetImage("assets/gambar/foto profil.jpeg"),
                   radius: 24.0,
                   backgroundColor: Colors.orange,
                 ),
@@ -103,7 +103,8 @@ class ProductListScreen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(width: 16.0),
-                      Image(image: NetworkImage(product.imageUrl)),
+                      Image.network(product.imageUrl,
+                      width:80.0, height: 80.0),
                     ],
                   ),
                 );
