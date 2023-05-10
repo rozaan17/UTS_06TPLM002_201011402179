@@ -58,7 +58,7 @@ class ProductListScreen extends StatelessWidget {
                 Text("Shoes",
                     style:
                         TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold)),
-                SizedBox(width: 16.0),
+                Spacer( ),
                 CircleAvatar(
                   backgroundImage: AssetImage("assets/gambar/foto profil.jpeg"),
                   radius: 24.0,
